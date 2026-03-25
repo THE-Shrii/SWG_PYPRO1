@@ -49,3 +49,42 @@ else:
 # =========================================================
 # 🎯 END OF GAME
 # =========================================================
+
+
+
+
+
+
+
+
+
+
+# =========================================================
+# 🐍 OPTIMIZED SNAKE WATER GUN GAME
+# =========================================================
+
+import random
+
+# Mapping
+choices = {"s": 1, "w": -1, "g": 0}
+reverse = {1: "Snake", -1: "Water", 0: "Gun"}
+
+# Input
+you = choices[input("Enter (s/w/g): ")]
+computer = random.choice([1, -1, 0])
+
+print("You:", reverse[you])
+print("Computer:", reverse[computer])
+
+# =========================================================
+# 🔥 SIMPLE LOGIC USING MATH
+# =========================================================
+
+if you == computer:
+    print("Draw")
+
+elif (you - computer) == 1 or (you - computer) == -2:
+    print("You Win")
+
+else:
+    print("You Lose")
